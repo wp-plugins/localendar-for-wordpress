@@ -11,6 +11,7 @@ localendar has provided powerful, easy-to-use calendars for over 12 years. Now y
 == Description ==
 
 Why use a slow, stripped-down calendar plugin that offers only a few basic features when you can have the power of a free localendar calendar on your site? Localendar offers [over 100 features](http://www.localendar.com/calendar/online-calendar-features) that provide a complete calendar solution.. Here are just a few:
+
 * Go beyond the traditional Month/Week/Day formats by selecting from our 9 different calendar layout styles (including our mini calendar with pop-up event balloons)
 * Sophisticated "Repeating Event" Functionality
 * Publish calendars in various languages and time zones
