@@ -1,4 +1,4 @@
-=== Localendar for WordPress ===
+=== Localendar Calendar for WordPress ===
 Contributors: griffinjt, localendar
 Donate link: 
 Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
@@ -22,10 +22,9 @@ Why use a slow, stripped-down calendar plugin that offers only a few basic featu
 * Common Event Information: Add "boilerplate" text (such as 'About Us', contact info, etc) to all of your events automatically without tedious retyping.
 * Use Images and Clipart in Event Descriptions: Add multiple images and clipart items to your events to create highly visual and detailed descriptions
 * Extensive clipart library, or upload your own. 
-* 8 different "transition" effects that can be applied to your public calendar when visitors move to a different time period: Fade, Vertical Slide and Fade, Zoom In, Bounce Right, Curtain, and more!
+* 8 different [transition effects](http://www.localendar.com/samples/specialeffect1/free-web-calendar.html) that can be applied to your public calendar when visitors move to a different time period: Fade, Vertical Slide and Fade, Zoom In, Bounce Right, Curtain, and more!
 * Powerful WYSIWYG Theme Editor: Our custom point-and-click widget gives you amazing control over the look and feel of your calendar. No CSS or development skills required!
 * Custom Image Backgrounds: Upload your own images to make your calendar seamlessly fit your site
-* Optional cool [transition effects](http://www.localendar.com/samples/specialeffect1/free-web-calendar.html)! 
 * Search within a calendar (sorted by relevancy, custom search periods)
 
 Get the plugin, create an account at [localendar.com](http://www.localendar.com), and put a powerful, capable calendar on your site! Check out the screenshots for more information.
@@ -69,11 +68,17 @@ You can learn more about our subscription packages on [this page](http://www.loc
 
  
 == Changelog ==
+
+= 1.0.1 =
+* Minor corrections to dialog text 
   
 = 1.0 =
 * Initial release
  
 == Upgrade Notice ==
   
+= 1.0.1 =
+* Minor corrections to dialog text 
+
 = 1.0 =
 * Initial Release
