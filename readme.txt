@@ -4,7 +4,7 @@ Donate link:
 Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
 Requires at least: 3.2
 Tested up to: 3.3.2
-Stable tag: 1.0
+Stable tag: 1.0.2
  
 localendar has provided powerful, easy-to-use calendars for over 12 years. Now you can create custom calendars for use on your WordPress site.
  
@@ -69,6 +69,9 @@ You can learn more about our subscription packages on [this page](http://www.loc
  
 == Changelog ==
 
+= 1.0.2 =
+* Added localendar signup link 
+
 = 1.0.1 =
 * Minor corrections to dialog text 
   
@@ -77,6 +80,9 @@ You can learn more about our subscription packages on [this page](http://www.loc
  
 == Upgrade Notice ==
   
+= 1.0.2 =
+* Added localendar signup link 
+
 = 1.0.1 =
 * Minor corrections to dialog text 
 

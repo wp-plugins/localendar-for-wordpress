@@ -5,7 +5,7 @@ Plugin URI: http://www.localendar.com
 Description: The official Localendar plugin for WordPress.
 Author: Thomas Griffin, localendar
 Author URI: http://thomasgriffinmedia.com/
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2.0 or later
 License URI: http://www.opensource.org/licenses/gpl-license.php
 */
@@ -243,6 +243,7 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
  	 						<p>
  	 							<label for="localendar-user"><?php _e( 'Localendar Username', 'localendar' ); ?></label>
  	 							<input id="localendar-user" name="localendar-user" type="text" value="" />
+								<?php _e( '<a style="margin-left:10px;" href="http://www.localendar.com/calendar/signup" target="_blank">Get a localendar account</a>', 'localendar' ); ?>
  	 						</p>
  	 						<p><strong><?php _e( 'Step 1: How do you want to include your calendar?', 'localendar' ); ?></strong></p>
  	 						<p class="localendar-types">
@@ -524,6 +525,7 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
  	 		<p>
  	 			<label for="<?php echo $this->get_field_id( 'username' ); ?>"><?php _e( 'Localendar Username', 'localendar' ); ?></label>
  	 			<input id="<?php echo $this->get_field_id( 'username' ); ?>" name="<?php echo $this->get_field_name( 'username' ); ?>" type="text" value="<?php echo esc_attr( $defaults['username'] ); ?>" style="width: 100%;" />
+				<?php _e( '<a style="margin-left:10px;" href="http://www.localendar.com/calendar/signup" target="_blank">Get a localendar account</a>', 'localendar' ); ?>
  	 		</p>
  	 		<p><strong><?php _e( 'Step 1: How do you want to include your calendar?', 'localendar' ); ?></strong></p>
  	 		<p class="localendar-types">
