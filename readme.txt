@@ -6,7 +6,7 @@ Requires at least: 3.2
 Tested up to: 3.3.2
 Stable tag: 1.1
  
-A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget. Fully customizable to fit your site and easy-to-use. 
+A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget. Fully customizable.
  
 == Description ==
 
