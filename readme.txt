@@ -1,31 +1,44 @@
 === Localendar Calendar for WordPress ===
 Contributors: griffinjt, localendar
 Donate link: 
-Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
+Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, twitter, twitter calendar,upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
 Requires at least: 3.2
 Tested up to: 3.3.2
-Stable tag: 1.0.2
+Stable tag: 1.1
  
-localendar has provided powerful, easy-to-use calendars for over 12 years. Now you can create custom calendars for use on your WordPress site.
+A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget. Fully customizable to fit your site and easy-to-use. 
  
 == Description ==
 
-Why use a slow, stripped-down calendar plugin that offers only a few basic features when you can have the power of a free localendar calendar on your site? Localendar offers [over 100 features](http://www.localendar.com/calendar/online-calendar-features) that provide a complete calendar solution.. Here are just a few:
+Thanks for checking out the [localendar](http://www.localendar.com) calendar plugin for WordPress. We have been powering web calendars for thousands of sites for over 12 years, and are pleased to provide a dedicated WordPress plugin.
+Why use a slow, stripped-down calendar plugin that offers only a few basic features when you can have the power of our complete solution which offers [over 100 features](http://www.localendar.com/calendar/online-calendar-features)?
 
-* Go beyond the traditional Month/Week/Day formats by selecting from our 9 different calendar layout styles (including our mini calendar with pop-up event balloons)
+We always display full event titles! We can't stress the importance of this enough. Many calendar plugins truncate your event titles to fit their layout, and force users to mouse-over each entry to see the full text. Our research has shown users don't want this hassle - they want to look at the calendar and see everything that is happening.
+localendar makes it easy to customize the calendar on your site. Whether you use our Theme Editor (no coding required!) or custom CSS hooks, you can make your calendar fir your site perfectly.
+
+Now with **Twitter integration**: Send event reminders as custom tweets.
+
+== Calendar Features ==
+
+* Full event title display on all calendar views - **no trunctation!**
+* Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget
+* Twitter and email support for event reminders 
 * Sophisticated "Repeating Event" Functionality
 * Publish calendars in various languages and time zones
-* Integrated RSS and iCal feeds
+* Full import/export iCal support
 * Merge calendars
 * Custom event categories
 * Local weather forecasts
-* Common Event Information: Add "boilerplate" text (such as 'About Us', contact info, etc) to all of your events automatically without tedious retyping.
+* Search within a calendar (sorted by relevancy, custom search periods)
+
+= Customize Customize Customize =
+
 * Use Images and Clipart in Event Descriptions: Add multiple images and clipart items to your events to create highly visual and detailed descriptions
 * Extensive clipart library, or upload your own. 
 * 8 different [transition effects](http://www.localendar.com/samples/specialeffect1/free-web-calendar.html) that can be applied to your public calendar when visitors move to a different time period: Fade, Vertical Slide and Fade, Zoom In, Bounce Right, Curtain, and more!
-* Powerful WYSIWYG Theme Editor: Our custom point-and-click widget gives you amazing control over the look and feel of your calendar. No CSS or development skills required!
+* **Powerful WYSIWYG Theme Editor:** Our custom point-and-click widget gives you amazing control over the look and feel of your calendar. No CSS or development skills required!
 * Custom Image Backgrounds: Upload your own images to make your calendar seamlessly fit your site
-* Search within a calendar (sorted by relevancy, custom search periods)
+* Common Event Information: Add "boilerplate" text (such as 'About Us', contact info, location, etc) to all of your events automatically without tedious retyping.
 
 Get the plugin, create an account at [localendar.com](http://www.localendar.com), and put a powerful, capable calendar on your site! Check out the screenshots for more information.
 
@@ -68,6 +81,9 @@ You can learn more about our subscription packages on [this page](http://www.loc
 
  
 == Changelog ==
+
+= 1.1 =
+* Added Twitter support for event reminders 
 
 = 1.0.2 =
 * Added localendar signup link 

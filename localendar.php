@@ -5,7 +5,7 @@ Plugin URI: http://www.localendar.com
 Description: The official Localendar plugin for WordPress.
 Author: Thomas Griffin, localendar
 Author URI: http://thomasgriffinmedia.com/
-Version: 1.0.2
+Version: 1.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.opensource.org/licenses/gpl-license.php
 */
