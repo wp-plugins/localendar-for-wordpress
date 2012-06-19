@@ -14,11 +14,11 @@ Thanks for checking out the [localendar](http://www.localendar.com) calendar plu
 Why use a slow, stripped-down calendar plugin that offers only a few basic features when you can have the power of our complete solution which offers [over 100 features](http://www.localendar.com/calendar/online-calendar-features)?
 
 We always display full event titles! We can't stress the importance of this enough. Many calendar plugins truncate your event titles to fit their layout, and force users to mouse-over each entry to see the full text. Our research has shown users don't want this hassle - they want to look at the calendar and see everything that is happening.
-localendar makes it easy to customize the calendar on your site. Whether you use our Theme Editor (no coding required!) or custom CSS hooks, you can make your calendar fir your site perfectly.
+localendar makes it easy to customize the calendar on your site. Whether you use our Theme Editor (no coding required!) or custom CSS hooks, you can make your calendar fit your site perfectly.
 
 Now with **Twitter integration**: Send event reminders as custom tweets.
 
-== Calendar Features ==
+= Calendar Features =
 
 * Full event title display on all calendar views - **no trunctation!**
 * Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget
