@@ -2,7 +2,7 @@
 /*
 Plugin Name: Localendar Calendar for WordPress
 Plugin URI: http://www.localendar.com
-Description: The official Localendar plugin for WordPress.
+Description: The official Localendar calendar plugin for WordPress.
 Author: Thomas Griffin, localendar
 Author URI: http://thomasgriffinmedia.com/
 Version: 1.1
