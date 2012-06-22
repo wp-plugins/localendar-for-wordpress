@@ -30,7 +30,7 @@ Now with **Twitter integration**: Send event reminders as custom tweets.
 * Full import/export iCal support
 * Merge calendars
 * Custom event categories
-* Local weather forecasts
+* Local **weather forecasts**
 * Search within a calendar (sorted by relevancy, custom search periods)
 
 = Customize Customize Customize =
