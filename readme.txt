@@ -85,13 +85,15 @@ You can learn more about our subscription packages on [this page](http://www.loc
 == Changelog ==
 
 = 1.1 =
-* Added Twitter support for event reminders 
+* Added Twitter support for calendar reminders 
 
 = 1.0.2 =
 * Added localendar signup link 
 
 = 1.0.1 =
+* Renamed the plugin from "Localendar for WordPress" to "Localendar Calendar for WordPress"
 * Minor corrections to dialog text 
+
   
 = 1.0 =
 * Initial release
@@ -99,12 +101,13 @@ You can learn more about our subscription packages on [this page](http://www.loc
 == Upgrade Notice ==
   
 = 1.1 =
-* Added Twitter support for event reminders 
+* Added Twitter support for calendar reminders 
 
 = 1.0.2 =
 * Added localendar signup link 
 
 = 1.0.1 =
+* Renamed the plugin from "Localendar for WordPress" to "Localendar Calendar for WordPress"
 * Minor corrections to dialog text 
 
 = 1.0 =
