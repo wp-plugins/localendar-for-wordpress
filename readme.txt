@@ -27,7 +27,7 @@ Now with **Twitter integration**: Send event reminders as custom tweets.
 * Twitter and email support for event reminders 
 * Sophisticated "Repeating Event" Functionality
 * Publish calendars in various languages and time zones
-* Full import/export iCal support
+* Full import/export support for iCal-based calendars (Google, Yahoo, Apple, etc)
 * Merge calendars
 * Custom event categories
 * Local **weather forecasts**
@@ -74,15 +74,21 @@ You can learn more about our subscription packages on [this page](http://www.loc
 == Screenshots ==
   
 1. A simple month-block calendar view. See our [Examples](http://www.localendar.com/calendar/online-calendar-samples) page for more styles. 
-2. The mini-cal widget with pop-up event balloons. 
+2. The mini calendar widget with pop-up event balloons. 
 3. Use our theme editor to customize your calendar without using CSS (CSS hooks also available)
 4. There are three different calendar styles used on this sample page
 5. A highly customized calendar created by a teacher for her students
-6. Import/Export from a variety of calendar systems
+6. Import/Export for a variety of calendar systems
 7. Manage your events through your localendar account with our powerful Event Editor
+8. Another customized month calendar, with different event colors, background color, and arrows
+9. The "Today+Happening Soon" calendar widget. You can customize the text, colors, and look-ahead period.
 
  
 == Changelog ==
+
+= 1.1.1 =
+* Added timeout for external calendar feeds that take too long to repond
+* Increased Event Description limit for imported iCal calendars
 
 = 1.1 =
 * Added Twitter support for calendar reminders 
