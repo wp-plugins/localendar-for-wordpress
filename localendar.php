@@ -236,7 +236,7 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 						<h2><?php _e( 'Choose Your Calendar', 'localendar' ); ?></h2>
 						<?php
 							$types 	= array( 'link', 'full', 'static', 'iframe', 'mini' );
- 	 						$styles = array( 'mb', 'mb2', 'ml', 'wb', 'wl', 'dv', 'th' );
+ 	 						$styles = array( 'mb', 'pbm','mb2', 'ml', 'wb', 'wl','pbw', 'dv', 'pbd','th' );
  	 					?>
  	 					<style type="text/css">.localendar-form .localendar-types input[type="radio"] { vertical-align: middle; } .localendar-form .localendar-types label { margin-left: 5px; vertical-align: middle; }</style>
  	 					<div class="localendar-form">
@@ -285,6 +285,9 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 											case 'mb' :
 												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Month Block-View', 'localendar' ) . '</option>';
 												break 1;
+											case 'pbm' :
+												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Month Pinboard', 'localendar' ) . '</option>';
+												break 1;
 											case 'mb2' :
 												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Month Block-View (Style #2)', 'localendar' ) . '</option>';
 												break 1;
@@ -297,8 +300,14 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 											case 'wl' :
 												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Week List-View', 'localendar' ) . '</option>';
 												break 1;
+											case 'pbw' :
+												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Week Pinboard', 'localendar' ) . '</option>';
+												break 1;
 											case 'dv' :
 												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Day View', 'localendar' ) . '</option>';
+												break 1;
+											case 'pbd' :
+												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Day Pinboard', 'localendar' ) . '</option>';
 												break 1;
 											case 'th' :
 												echo '<option value="' . esc_attr( $style ) . '">' . __( 'Today + "Happening Soon"', 'localendar' ) . '</option>';
@@ -646,6 +655,15 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
  	 						else
  	 							$calendar = '<a class="localendar" href="http://www.localendar.com/public/' . esc_attr( $username ) . '' . $query . '" target="_blank">' . esc_attr( $link_text ) . '</a>';
  	 						break 1;
+ 	 					case 'pbd' :
+ 	 						$calendar = '<a class="localendar" href="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=D6' . $query . '" target="_blank">' . esc_attr( $link_text ) . '</a>';
+ 	 						break 1;
+ 	 					case 'pbw' :
+ 	 						$calendar = '<a class="localendar" href="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=W6' . $query . '" target="_blank">' . esc_attr( $link_text ) . '</a>';
+ 	 						break 1;
+ 	 					case 'pbm' :
+ 	 						$calendar = '<a class="localendar" href="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=M6' . $query . '" target="_blank">' . esc_attr( $link_text ) . '</a>';
+ 	 						break 1;
  	 					case 'mb2' :
  	 						$calendar = '<a class="localendar" href="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=M4' . $query . '" target="_blank">' . esc_attr( $link_text ) . '</a>';
  	 						break 1;
@@ -673,6 +691,15 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
  	 							$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&dynamic=Y&style=M0&current_only=Y' . $query . '"></script>';
  	 						else
  	 							$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&dynamic=Y&style=M0' . $query . '"></script>';
+ 	 						break 1;
+ 	 					case 'pbd' :
+ 	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&dynamic=Y&style=D6' . $query . '"></script>';
+ 	 						break 1;
+ 	 					case 'pbw' :
+ 	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&dynamic=Y&style=W6' . $query . '"></script>';
+ 	 						break 1;
+ 	 					case 'pbm' :
+ 	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&dynamic=Y&style=M6' . $query . '"></script>';
  	 						break 1;
  	 					case 'mb2' :
  	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&dynamic=Y&style=M4' . $query . '"></script>';
@@ -702,6 +729,15 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
  	 						else
  	 							$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&style=M0' . $query . '"></script>';
  	 						break 1;
+ 	 					case 'pbd' :
+ 	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&style=D6' . $query . '"></script>';
+ 	 						break 1;
+ 	 					case 'pbw' :
+ 	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&style=W6' . $query . '"></script>';
+ 	 						break 1;
+ 	 					case 'pbm' :
+ 	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&style=M6' . $query . '"></script>';
+ 	 						break 1;
  	 					case 'mb2' :
  	 						$calendar = '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&style=M4' . $query . '"></script>';
  	 						break 1;
@@ -729,6 +765,15 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
  	 							$calendar = '<iframe src="http://www.localendar.com/public/' . esc_attr( $username ) . '?current_only=Y' . $query . '" height=' . $height . ' width=' . $width . ' marginheight=0 marginwidth=0 scrolling=no frameborder=0 border=0></iframe>';
  	 						else
  	 							$calendar = '<iframe src="http://www.localendar.com/public/' . esc_attr( $username ) . '' . $query . '" height=' . $height . ' width=' . $width . ' marginheight=0 marginwidth=0 scrolling=no frameborder=0 border=0></iframe>';
+ 	 						break 1;
+ 	 					case 'pbd' :
+ 	 						$calendar = '<iframe src="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=D6' . $query . '" height=' . $height . ' width=' . $width . ' marginheight=0 marginwidth=0 scrolling=no frameborder=0 border=0></iframe>';
+ 	 						break 1;
+ 	 					case 'pbw' :
+ 	 						$calendar = '<iframe src="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=W6' . $query . '" height=' . $height . ' width=' . $width . ' marginheight=0 marginwidth=0 scrolling=no frameborder=0 border=0></iframe>';
+ 	 						break 1;
+ 	 					case 'pbm' :
+ 	 						$calendar = '<iframe src="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=M6' . $query . '" height=' . $height . ' width=' . $width . ' marginheight=0 marginwidth=0 scrolling=no frameborder=0 border=0></iframe>';
  	 						break 1;
  	 					case 'mb2' :
  	 						$calendar = '<iframe src="http://www.localendar.com/public/' . esc_attr( $username ) . '?style=M4' . $query . '" height=' . $height . ' width=' . $width . ' marginheight=0 marginwidth=0 scrolling=no frameborder=0 border=0></iframe>';

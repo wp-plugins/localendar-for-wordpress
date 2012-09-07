@@ -3,8 +3,8 @@ Contributors: griffinjt, localendar
 Donate link: 
 Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, twitter, twitter calendar,upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
 Requires at least: 3.2
-Tested up to: 3.4
-Stable tag: 1.1.2
+Tested up to: 3.4.1
+Stable tag: 1.1.3
  
 A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget. Fully customizable.
  
@@ -75,16 +75,20 @@ You can learn more about our subscription packages on [this page](http://www.loc
   
 1. A simple month-block calendar view. See our [Examples](http://www.localendar.com/calendar/online-calendar-samples) page for more styles. 
 2. The mini calendar widget with pop-up event balloons. 
-3. Use our theme editor to customize your calendar without using CSS (CSS hooks also available)
-4. There are three different calendar styles used on this sample page
-5. A highly customized calendar created by a teacher for her students
-6. Import/Export for a variety of calendar systems
-7. Manage your events through your localendar account with our powerful Event Editor
-8. Another customized month calendar, with different event colors, background color, and arrows
-9. The "Today+Happening Soon" calendar widget. You can customize the text, colors, and look-ahead period.
+3. Our Pinboard "flow-style" view. Just one of over 45 ways to publish your calendar
+4. Use our theme editor to customize your calendar without using CSS (CSS hooks also available)
+5. There are three different calendar styles used on this sample page
+6. A highly customized calendar created by a teacher for her students
+7. Import/Export for a variety of calendar systems
+8. Manage your events through your localendar account with our powerful Event Editor
+9. Another customized month calendar, with different event colors, background color, and arrows
+10. The "Today+Happening Soon" calendar widget. You can customize the text, colors, and look-ahead period.
 
  
 == Changelog ==
+
+= 1.1.3 =
+* Added a new Pinboard-style display format, bringing us to over 45 ways to publish your calendar
 
 = 1.1.2 =
 * CSS tweaks to integrate better with various WordPress themes
