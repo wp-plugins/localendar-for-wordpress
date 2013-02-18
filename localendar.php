@@ -329,7 +329,7 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
  	 							<label for="localendar-events"><?php _e( 'Hide events that occur in the previous/next month when applicable?', 'localendar' ); ?></label>
  	 						</p>
 							<div class="localendar-mini-style" style='display:none'>
-								Color Customizations for mini-calendar. Use the color chooser or enter hex values.
+								Optional color customizations for mini-calendar. Please supply hex color codes.
 								<table><tr><td>
 								<label for="localendar-bgm-events"><?php _e( 'background color, Days with events', 'localendar' ); ?></label>
 								</td><td>
