@@ -5,7 +5,7 @@ Plugin URI: http://www.localendar.com
 Description: The official Localendar calendar plugin for WordPress.
 Author: Thomas Griffin, localendar
 Author URI: http://thomasgriffinmedia.com/
-Version: 1.1.3
+Version: 1.1.4
 License: GNU General Public License v2.0 or later
 License URI: http://www.opensource.org/licenses/gpl-license.php
 */
@@ -129,9 +129,12 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 			global $current_screen, $pagenow;
 
 			wp_register_script( 'localendar-admin', plugins_url( 'lib/js/admin.js', __FILE__ ), array( 'jquery' ), '1.0.0', true );
-
 			if ( 'widgets' == $current_screen->id || in_array( $pagenow, array( 'post.php', 'page.php', 'post-new.php', 'post-edit.php' ) ) )
 				wp_enqueue_script( 'localendar-admin' );
+
+			wp_register_script( 'localendar-admin-cp', plugins_url( 'lib/js/iColorPicker.js', __FILE__ ), array( 'jquery' ), '1.0.0', true );
+			if ( 'widgets' == $current_screen->id || in_array( $pagenow, array( 'post.php', 'page.php', 'post-new.php', 'post-edit.php' ) ) )
+				wp_enqueue_script( 'localendar-admin-cp' );
 
 		}
 
@@ -182,6 +185,8 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 						var width 	= jQuery('#localendar-iframe-width').val() ? 'iframe_width="' + jQuery('#localendar-iframe-width').val() + '"' : '';
 						var height 	= jQuery('#localendar-iframe-height').val() ? 'iframe_height="' + jQuery('#localendar-iframe-height').val() + '"' : '';
 						var query 	= jQuery('#localendar-query').val() ? 'query="' + jQuery('#localendar-query').val() + '"' : '';
+						var bgm_events 	= jQuery('#localendar-bgm-events').val() ? 'bg_events="' + jQuery('#localendar-bgm-events').val() + '"' : '';
+						var bgm_balloon = jQuery('#localendar-bgm-balloon').val() ? 'bg_balloon="' + jQuery('#localendar-bgm-balloon').val() + '"' : '';
 						//console.log(user, type, style, hide, text, width, height, query);
 
 						/** Return early if no username, type or style */
@@ -215,7 +220,7 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 								window.send_to_editor('[localendar ' + user + ' ' + type + ' ' + style + ' ' + hide + ' ' + width + ' ' + height + ' ' + query + ']');
 								break;
 							case 'type="mini"' :
-								window.send_to_editor('[localendar ' + user + ' ' + type + ' ' + style + ' ' + hide + ' ' + query + ']');
+								window.send_to_editor('[localendar ' + user + ' ' + type + ' ' + style + ' ' + hide + ' ' + query + ' ' + bgm_events+ ' ' + bgm_balloon + ']');
 								break;
 						}
 
@@ -227,6 +232,8 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 						jQuery('#localendar-iframe-width').val('');
 						jQuery('#localendar-iframe-height').val('');
 						jQuery('#localendar-query').val('');
+						jQuery('#localendar-bgm-events').val('');
+						jQuery('#localendar-bgm-balloon').val('');
 					}
 				</script>
 
@@ -321,6 +328,19 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
  	 							<input id="localendar-events" name="localendar-events" type="checkbox" value="" />
  	 							<label for="localendar-events"><?php _e( 'Hide events that occur in the previous/next month when applicable?', 'localendar' ); ?></label>
  	 						</p>
+							<div class="localendar-mini-style" style='display:none'>
+								Color Customizations for mini-calendar. Use the color chooser or enter hex values.
+								<table><tr><td>
+								<label for="localendar-bgm-events"><?php _e( 'background color, Days with events', 'localendar' ); ?></label>
+								</td><td>
+								#<input id="localendar-bgm-events" style="font-family: Courier" size=6 maxlength="6" name="localendar-bgm-events" type="text" value="" /><br />
+								</td><td>
+								<label for="localendar-bgm-balloon">&nbsp;&nbsp;<?php _e( 'background color, Event balloon pop-up', 'localendar' ); ?></label>
+								</td><td>
+								#<input id="localendar-bgm-balloon" style="font-family: Courier" size=6 maxlength="6" name="localendar-bgm-balloon" type="text" value="" /><br />
+								</td></tr></table>
+								<small>More color customizations can be set directly from localendar.com</small>
+							</div>
  	 						<p class="step-3"><strong><?php _e( 'Step 3: Additional Customizations', 'localendar' ); ?></strong></p>
  	 						<p class="localendar-iframe-style">
  	 							<label for="localendar-iframe-width"><?php _e( 'Iframe Width?', 'localendar' ); ?></label><br />
@@ -376,14 +396,16 @@ if ( ! class_exists( 'TGM_Localendar' ) ) {
 				'link_text' 	=> '',
 				'iframe_width'	=> '',
 				'iframe_height'	=> '',
-				'query'			=> ''
+				'query'			=> '',
+				'bg_events' 	=> '',
+				'bg_balloon' 	=> ''
 			), $atts ) );
 
 			if ( ! $username )
 				return __( 'You must enter a valid username to display a calendar.', 'localendar' );
 
 			/** Build the calendar */
-			$calendar = TGM_Localendar_Widget::build_calendar( $username, $type, $style, $hide_events, $link_text, $iframe_width, $iframe_height, $query );
+			$calendar = TGM_Localendar_Widget::build_calendar( $username, $type, $style, $hide_events, $link_text, $iframe_width, $iframe_height, $query, $bg_events, $bg_balloon );
 
 			return apply_filters( 'tgmlo_calendar_shortcode', $calendar );
 
@@ -455,7 +477,7 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
 
  	 		do_action( 'tgmlo_widget_before_calendar', $args, $instance );
 
- 	 		$calendar = $this->build_calendar( $instance['username'], $instance['type'], $instance['style'], $instance['hide_events'], $instance['link_text'], $instance['width'], $instance['height'], $instance['query'] );
+ 	 		$calendar = $this->build_calendar( $instance['username'], $instance['type'], $instance['style'], $instance['hide_events'], $instance['link_text'], $instance['width'], $instance['height'], $instance['query'], $instance['bg_events'],$instance['bg_balloon'] );
 
  	 		echo sprintf( '<div class="localendar-output">%s</div>', apply_filters( 'tgmlo_calendar_output', $calendar, $args, $instance ) );
 
@@ -606,11 +628,24 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
  	 			<label for="<?php echo $this->get_field_id( 'hide_events' ); ?>"><?php _e( 'Hide events that occur in the previous/next month when applicable?', 'localendar' ); ?></label><br />
  	 			<span class="description"><?php _e( 'This field is applied only when the "Month Block-View" style is selected.', 'localendar' ); ?></span>
  	 		</p>
+			<div class="localendar-mini-style" style='display:none'>
+				Color Customizations for mini-calendar. Use the color chooser or enter hex values.
+				<table><tr><td>
+				<label for="localendar-bgm-events"><?php _e( 'background color, Days with events', 'localendar' ); ?></label>
+				</td><td>
+				#<input id="localendar-bgm-events" style="font-family: Courier" size=6 maxlength="6" name="localendar-bgm-events" type="text" value="" /><br />
+				</td><td>
+				<label for="localendar-bgm-balloon">&nbsp;&nbsp;<?php _e( 'background color, Event baloon pop-up', 'localendar' ); ?></label>
+				</td><td>
+				#<input id="localendar-bgm-balloon" style="font-family: Courier" size=6 maxlength="6" name="localendar-bgm-balloon" type="text" value="" /><br />
+				</td></tr></table>
+				<small>More color customizations can be set directly from localendar.com</small>
+			</div>
  	 		<p class="step-3"><strong><?php _e( 'Step 3: Additional Customizations', 'localendar' ); ?></strong></p>
  	 		<p class="localendar-iframe-style">
  	 			<label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Iframe Width?', 'localendar' ); ?></label><br />
  	 			<input id="<?php echo $this->get_field_id( 'width' ); ?>" name="<?php echo $this->get_field_name( 'width' ); ?>" type="text" value="<?php echo esc_attr( $defaults['width'] ); ?>" style="width: 100%;" />
- 	 			<span class="description"><?php _e( 'Used to determine width of an iframe (if iframe type is selected).', 'localendar' ); ?></span><br /><br />
+ 	 			<br /><br />
  	 			<label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Iframe Height?', 'localendar' ); ?></label><br />
  	 			<input id="<?php echo $this->get_field_id( 'height' ); ?>" name="<?php echo $this->get_field_name( 'height' ); ?>" type="text" value="<?php echo esc_attr( $defaults['height'] ); ?>" style="width: 100%;" />
  	 			<span class="description"><?php _e( 'Used to determine height of an iframe (if iframe type is selected).', 'localendar' ); ?></span>
@@ -639,11 +674,14 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
 		 * @param int $height Height of calendar (iframe only)
 		 * @return string $calendar The built calendar
 		 */
- 	 	public function build_calendar( $username, $type, $style, $hide_events = 'false', $link_text = '', $width = '', $height = '', $query = '' ) {
+ 	 	public function build_calendar( $username, $type, $style, $hide_events = 'false', $link_text = '', $width = '', $height = '', $query = '', $localendar_bgm_events, $localendar_bgm_balloon ) {
 
  	 		$calendar 	= '';
  	 		$width 		= isset( $width ) ? $width : 700;
  	 		$height 	= isset( $height ) ? $height : 600;
+
+			$localendar_bgm_events= isset( $localendar_bgm_events ) && !empty($localendar_bgm_events) ? $localendar_bgm_events : 'ffa500';
+			$localendar_bgm_balloon= isset( $localendar_bgm_balloon )&& !empty($localendar_bgm_balloon) ? $localendar_bgm_balloon : 'e6e6e6';
 
  	 		/** Build the calendar */
  	 		switch ( $type ) {
@@ -796,8 +834,9 @@ if ( ! class_exists( 'TGM_Localendar_Widget' ) ) {
  	 				}
  	 				break;
  	 			case 'mini' :
- 	 				$calendar = '<style type="text/css">#elsiemini table{width:auto;height:auto;}.localendar-close{position:absolute;top:4px;right:4px;border:none;margin:2px;}.localendar-mini td,th{width:30px;height:30px;text-align:center;vertical-align:middle;font-family:arial;font-size:16px;}.localendar-label,.localendar-time,.localendar-title{font-family:arial;font-size:12px;}.localendar-label{font-weight:bold;font-size:14px;}.localendar-hasEvents{background-color:orange !important;cursor:pointer;}.localendar-monthName{}.localendar-balloon{text-align:left;}</style>';
- 	 				$calendar .= '<script>var lcPopupColor="rgba(230, 230, 230, .9)";var lcPopupOutline="#333333";var lcPopupCornerRadius=20;</script>';
+
+ 	 				$calendar = '<style type="text/css">#elsiemini table{width:auto;height:auto;}.localendar-close{position:absolute;top:4px;right:4px;border:none;margin:2px;}.localendar-mini td,th{width:30px;height:30px;text-align:center;vertical-align:middle;font-family:arial;font-size:16px;}.localendar-label,.localendar-time,.localendar-title{font-family:arial;font-size:12px;}.localendar-label{font-weight:bold;font-size:14px;}.localendar-hasEvents{background-color:#' . $localendar_bgm_events . ' !important;cursor:pointer;}.localendar-monthName{}.localendar-balloon{text-align:left;}</style>';
+ 	 				$calendar .= '<script>var lcPopupColor="#' . $localendar_bgm_balloon . '";var lcPopupOutline="#333333";var lcPopupCornerRadius=20;</script>';
  	 				$calendar .= '<script type="text/javascript" src="http://www.localendar.com/js/PublishedIncludeMini.js"></script>';
 					$calendar .= '<script type="text/javascript" src="http://www.localendar.com/public/' . esc_attr( $username ) . '?include=Y&style=M5' . $query . '"></script>';
  	 				break;

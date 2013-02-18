@@ -3,14 +3,14 @@ Contributors: griffinjt, localendar
 Donate link: 
 Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, twitter, twitter calendar,upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
 Requires at least: 3.2
-Tested up to: 3.4.1
-Stable tag: 1.1.3
+Tested up to: 3.5.1
+Stable tag: 1.1.4
  
 A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget. Fully customizable.
  
 == Description ==
 
-Thanks for checking out the [localendar](http://www.localendar.com) calendar plugin for WordPress. We have been powering web calendars for thousands of sites for over 12 years, and are pleased to provide a dedicated WordPress plugin.
+Thanks for checking out the [localendar](http://www.localendar.com) calendar plugin for WordPress. We have been powering web calendars for thousands of sites for over 13 years, and are pleased to provide a dedicated WordPress plugin.
 
 Why use a slow, stripped-down calendar plugin that offers only a few basic features when you can have the power of our complete solution which offers [over 100 features](http://www.localendar.com/calendar/online-calendar-features)?
 
@@ -67,7 +67,7 @@ More information on configuring your calendar for your site can be found on our 
 You can find answers for many common questions on our [documentation wiki](http://www.localendar.com/docs). If you still need help, you can also post a question on our [support forums](http://www.localendar.com/forums/support).
 
 = Is it really free? =
-Yes, localendar has been providing free web calendars for over 12 years. We do offer Premium Subscriptions that offer additional calendar features at very low subscription rates. All new members receive a trial of the Premium Webmaster subscription, so they can try out some of these features for the first month.
+Yes, localendar has been providing free web calendars for over 13 years. We do offer Premium Subscriptions that offer additional calendar features at very low subscription rates. All new members receive a trial of the Premium Webmaster subscription, so they can try out some of these features for the first month.
 You can learn more about our subscription packages on [this page](http://www.localendar.com/calendar/online-calendar/premium). Keep in mind, you do not need any subscription to use the majority of calendar features. 
 
  
@@ -83,9 +83,16 @@ You can learn more about our subscription packages on [this page](http://www.loc
 8. Manage your events through your localendar account with our powerful Event Editor
 9. Another customized month calendar, with different event colors, background color, and arrows
 10. The "Today+Happening Soon" calendar widget. You can customize the text, colors, and look-ahead period.
+11. The "Today+Happening Soon" calendar widget, with Day/Date information across the top of the calendar
 
  
 == Changelog ==
+
+= 1.1.4 =
+* Added option to rotate Day/Date positions on the Today+Happening Soon calendar view
+* Added ability more customizations to the mini calendar
+* Additional calendar translations
+* Updated description to reflect we've been a web calendar provider for more than 13 years!
 
 = 1.1.3 =
 * Added a new Pinboard-style display format, bringing us to over 45 ways to publish your calendar
