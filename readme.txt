@@ -4,13 +4,13 @@ Donate link:
 Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, twitter, twitter calendar,upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
 Requires at least: 3.2
 Tested up to: 3.5.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
  
-A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget. Fully customizable.
+A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini calendar widget. Fully customizable.
  
 == Description ==
 
-Thanks for checking out the [localendar](http://www.localendar.com) calendar plugin for WordPress. We have been powering web calendars for thousands of sites for over 13 years, and are pleased to provide a dedicated WordPress plugin.
+Thanks for checking out the [localendar](http://www.localendar.com) calendar plugin for WordPress. We have been powering web calendars for thousands of sites for over 13 years, and are pleased to provide a dedicated calendar plugin for WordPress.
 
 Why use a slow, stripped-down calendar plugin that offers only a few basic features when you can have the power of our complete solution which offers [over 100 features](http://www.localendar.com/calendar/online-calendar-features)?
 
@@ -26,10 +26,10 @@ Now with **Twitter integration**: Send event reminders as custom tweets.
 * Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget
 * Twitter and email support for event reminders 
 * Sophisticated "Repeating Event" Functionality
-* Publish calendars in various languages and time zones
+* Publish your calendar in various languages and time zones
 * Full import/export support for iCal-based calendars (Google, Yahoo, Apple, etc)
 * Merge calendars
-* Custom event categories
+* **Unlimited** custom event categories
 * Local **weather forecasts**
 * Search within a calendar (sorted by relevancy, custom search periods)
 
@@ -88,6 +88,10 @@ You can learn more about our subscription packages on [this page](http://www.loc
  
 == Changelog ==
 
+= 1.1.5 =
+* Added additonal languages (Norwegian, Portuguese Slovenian) 
+* Fixed OAuth issue with Twitter (due to unannounced Twitter change)
+
 = 1.1.4 =
 * Added option to rotate Day/Date positions on the Today+Happening Soon calendar view
 * Added ability more customizations to the mini calendar
@@ -114,11 +118,23 @@ You can learn more about our subscription packages on [this page](http://www.loc
 * Renamed the plugin from "Localendar for WordPress" to "Localendar Calendar for WordPress"
 * Minor corrections to dialog text 
 
-  
 = 1.0 =
 * Initial release
  
 == Upgrade Notice ==
+
+= 1.1.5 =
+* Added additonal languages (Norwegian, Portuguese Slovenian) 
+* Fixed OAuth issue with Twitter (due to unannounced Twitter change)
+
+= 1.1.4 =
+* Added option to rotate Day/Date positions on the Today+Happening Soon calendar view
+* Added ability more customizations to the mini calendar
+* Additional calendar translations
+* Updated description to reflect we've been a web calendar provider for more than 13 years!
+
+= 1.1.3 =
+* Added a new Pinboard-style display format, bringing us to over 45 ways to publish your calendar
   
 = 1.1.2 =
 * CSS tweaks to integrate better with various WordPress themes
