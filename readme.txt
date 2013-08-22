@@ -3,8 +3,8 @@ Contributors: griffinjt, localendar
 Donate link: 
 Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, twitter, twitter calendar,upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
 Requires at least: 3.2
-Tested up to: 3.5.1
-Stable tag: 1.1.6
+Tested up to: 3.6
+Stable tag: 1.1.8
  
 A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini calendar widget. Fully customizable.
  
@@ -25,6 +25,7 @@ Now with **Twitter integration**: Send event reminders as custom tweets.
 * Full event title display on all calendar views - **no trunctation!**
 * Month/Week/Day block and list views, "Today + Happening Soon", and a mini-calendar widget
 * Twitter and email support for event reminders 
+* Add calendar attachments directly from Dropbox.com
 * Sophisticated "Repeating Event" Functionality
 * Publish your calendar and events in various languages and timezones
 * Full import/export support for iCal-based calendars (Google, Yahoo, Apple, etc)
@@ -87,6 +88,12 @@ You can learn more about our subscription packages on [this page](http://www.loc
 
  
 == Changelog ==
+
+= 1.1.8 =
+* Added support for Dropbox-hosted attachments on Event Descriptions
+
+= 1.1.7 =
+* Fix for jQuery used on wordpress.org
 
 = 1.1.6 =
 * Support for country-specific or global timezone selection on events
