@@ -3,8 +3,8 @@ Contributors: griffinjt, localendar
 Donate link: 
 Tags: calendar, calender, calendar 2012, calendar widget, event, events, event widget, free calendar, global calendar, google calendar, holiday calendar, school calendar, church calendar, yahoo calendar, team calendar, ical, ical sync, icalendar, ics, ics calendar, ics feed, localendar, online calendar, outlook, outlook calendar, rss, twitter, twitter calendar,upcoming events, web calendar, web events, widget, wordpress ical, wordpress calendar
 Requires at least: 3.2
-Tested up to: 3.6
-Stable tag: 1.1.8
+Tested up to: 4.0.1
+Stable tag: 1.1.9
  
 A powerful calendar with Month/Week/Day block and list views, "Today + Happening Soon", and a mini calendar widget. Fully customizable.
  
@@ -88,6 +88,9 @@ You can learn more about our subscription packages on [this page](http://www.loc
 
  
 == Changelog ==
+
+= 1.1.9 =
+* Verified compatibility with Wordpress 4.0 and 4.0.1
 
 = 1.1.8 =
 * Added support for Dropbox-hosted attachments on Event Descriptions

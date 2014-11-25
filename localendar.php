@@ -5,13 +5,13 @@ Plugin URI: http://www.localendar.com
 Description: The official Localendar calendar plugin for WordPress.
 Author: Thomas Griffin, localendar
 Author URI: http://thomasgriffinmedia.com/
-Version: 1.1.8
+Version: 1.1.9
 License: GNU General Public License v2.0 or later
 License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
 /*
-	Copyright 2012	 Thomas Griffin	 (email : thomas@thomasgriffinmedia.com)
+	Copyright 2012	 Thomas Griffin	 (email : thomas@thomasgriffinmedia.com) and localendar.com
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
